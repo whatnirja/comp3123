@@ -13,9 +13,10 @@ greeter(["Pritesh", "Roman", "Jermey", "Rohan", "Roberto"], 0);
 // Exercise 2
 capitalize = (str) => {
   [...str].map(() => {
-    str = str.replace(str[0], str[0].toUpperCase())
+    return str = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
   })
   return str
 }
 
 console.log(capitalize("fooBar"));
+console.log(capitalize("nodeJs"));
