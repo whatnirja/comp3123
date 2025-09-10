@@ -12,12 +12,10 @@ greeter(["Pritesh", "Roman", "Jermey", "Rohan", "Roberto"], 0);
 
 // Exercise 2
 capitalize = (str) => {
-  [...str].map((char, index) => {
-    if(index == 0){
-      char = char.toUpperCase()
-    }
+  [...str].map(() => {
+    str = str.replace(str[0], str[0].toUpperCase())
   })
   return str
 }
 
-console.log(capitalize("hello")); 
+console.log(capitalize("fooBar"));
