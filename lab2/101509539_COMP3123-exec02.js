@@ -17,7 +17,7 @@ capitalize = (str) => {
       char = char.toUpperCase()
     }
   })
-  console.log(str);
+  return str
 }
 
 console.log(capitalize("hello")); 
