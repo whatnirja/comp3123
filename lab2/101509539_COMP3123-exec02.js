@@ -20,3 +20,10 @@ capitalize = (str) => {
 
 console.log(capitalize("fooBar"));
 console.log(capitalize("nodeJs"));
+
+// Exercise 3
+const colors = ["red", "green", "blue"];
+
+capitilizedColors = colors.map(capitalize)
+
+console.log(capitilizedColors);
