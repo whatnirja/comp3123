@@ -27,3 +27,20 @@ const colors = ["red", "green", "blue"];
 capitilizedColors = colors.map(capitalize)
 
 console.log(capitilizedColors);
+
+// Exercise 4
+var values = [1, 60, 34, 30, 20, 5]
+filerLessThan20 = () => {
+  return values.filter(value => {
+    return value < 20
+  })
+}
+
+console.log(filerLessThan20());
+
+// Exercise 5
+var array = [1, 2, 3, 4, 5]
+
+calculateSum = () => {
+  return array.reduce()
+}
