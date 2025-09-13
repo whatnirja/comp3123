@@ -7,7 +7,7 @@ var greeter = (myArray, counter) => {
   })
   console.log(newArray);
 }
-
+console.log("Exercise 1: ");
 greeter(["Pritesh", "Roman", "Jermey", "Rohan", "Roberto"], 0);
 
 // Exercise 2
@@ -17,7 +17,7 @@ capitalize = (str) => {
   })
   return str
 }
-
+console.log("Exercise 2: ");
 console.log(capitalize("fooBar"));
 console.log(capitalize("nodeJs"));
 
@@ -26,6 +26,7 @@ const colors = ["red", "green", "blue"];
 
 capitilizedColors = colors.map(capitalize)
 
+console.log("Exercise 3: ");
 console.log(capitilizedColors);
 
 // Exercise 4
@@ -34,7 +35,7 @@ const filerLessThan20 = values.filter(value => {
     return value < 20
   })
 
-
+console.log("Exercise 4: ");
 console.log(filerLessThan20);
 
 // Exercise 5
@@ -43,6 +44,7 @@ var array = [1, 2, 3, 4]
 const calculateSum = array.reduce((a, c) => a + c)
 const calculateProduct = array.reduce((a, c) => a * c)
 
+console.log("Exercise 5: ");
 console.log(calculateSum);
 console.log(calculateProduct);
 
@@ -81,6 +83,8 @@ class Sedan extends Car {
 const car = new Car("Honda Civic", 2018);
 const sedan = new Sedan("Honda Civic", 2018, 10000);
 
+
+console.log("Exercise 6: ");
 console.log(car.details());
 console.log(sedan.details());
 console.log(sedan.info());
