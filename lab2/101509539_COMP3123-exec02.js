@@ -30,17 +30,57 @@ console.log(capitilizedColors);
 
 // Exercise 4
 var values = [1, 60, 34, 30, 20, 5]
-filerLessThan20 = () => {
-  return values.filter(value => {
+const filerLessThan20 = values.filter(value => {
     return value < 20
   })
-}
 
-console.log(filerLessThan20());
+
+console.log(filerLessThan20);
 
 // Exercise 5
-var array = [1, 2, 3, 4, 5]
+var array = [1, 2, 3, 4]
 
-calculateSum = () => {
-  return array.reduce()
+const calculateSum = array.reduce((a, c) => a + c)
+const calculateProduct = array.reduce((a, c) => a * c)
+
+console.log(calculateSum);
+console.log(calculateProduct);
+
+
+// Exercise 6
+class Car {
+  constructor(model, year) {
+    this.model = model;
+    this.year = year;
+  }
+
+  details() {
+    return `Model: ${this.model} Engine ${this.year}`;
+  }
+
+  info() {}
 }
+
+class Sedan extends Car {
+  constructor(model, year, balance) {
+    // Call parent constructor with super
+    super(model, year);
+    this.balance = balance;
+  }
+
+  info() {
+    return `Model: ${this.model} Engine ${this.year}`;
+  }
+
+  details(){
+    return `${this.model} has a balance of ${this.balance}`
+  }
+
+}
+
+const car = new Car("Honda Civic", 2018);
+const sedan = new Sedan("Honda Civic", 2018, 10000);
+
+console.log(car.details());
+console.log(sedan.details());
+console.log(sedan.info());
