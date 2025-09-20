@@ -1,11 +1,23 @@
 var http = require("http");
 //TODO - Use Employee Module here
 console.log("Lab 03 -  NodeJs");
-
+const employees = require("./Employee");
 //TODO - Fix any errors you found working with lab exercise
 
 //Define Server Port
 const port = process.env.PORT || 8081
+
+
+//helper methods 
+function sendJSON(res, code, obj) {
+    res.writeHead(code, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(obj));
+}
+
+function sendHTML(res, code, html) {
+    res.writeHead(code, { 'Content-Type': 'text/html' });
+    res.end(html);
+}
 
 //Create Web Server using CORE API
 const server = http.createServer((req, res) => {
@@ -14,6 +26,7 @@ const server = http.createServer((req, res) => {
     } else {
         if (req.url === '/') {
             //TODO - Display message "<h1>Welcome to Lab Exercise 03</h1>"
+            return sendHTML(res, 200, "<h1>Welcome to Lab Exercise 03</h1>")
         }
 
         if (req.url === '/employee') {
