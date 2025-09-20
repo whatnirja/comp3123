@@ -31,16 +31,22 @@ const server = http.createServer((req, res) => {
 
         if (req.url === '/employee') {
             //TODO - Display all details for employees in JSON format
+            return sendJSON(res, 200, employees)
         }
 
         if (req.url === '/employee/names') {
             //TODO - Display only all employees {first name + lastname} in Ascending order in JSON Array
             //e.g. [ "Ash Lee", "Mac Mohan", "Pritesh Patel"]
+            const output = employees.map(e => e.firstName + " " + e.lastName).sort()
+            return sendJSON(res, 200, output) //check this
         }
 
         if (req.url === '/employee/totalsalary') {
             //TODO - Display Sum of all employees salary in given JSON format 
             //e.g. { "total_salary" : 100 }  
+            let total_salary = 0;
+            employees.forEach(e => total_salary += e.Salary)
+            return sendJSON(res, 200, {"total_salary" : total_salary})
     }
     res.end(`{"error": "${http.STATUS_CODES[404]}"}`)
     }
