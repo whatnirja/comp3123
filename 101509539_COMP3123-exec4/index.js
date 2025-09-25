@@ -3,6 +3,8 @@ var express = require('express');
 const SERVER_PORT = 3000;
 var app = express();
 
+app.use(express.json());
+
 
 // GET /hello
 app.get('/hello', function(req, res) {
@@ -36,3 +38,8 @@ app.get('/hello', function(req, res) {
 
 
 
+
+
+app.listen(SERVER_PORT, function() {
+    console.log('Server is running on http://localhost:' + SERVER_PORT);
+});
