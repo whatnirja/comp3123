@@ -9,3 +9,6 @@ let employees = [
 
 //exporting the Employee Module
 module.exports = employees; 
+
+//exports is an object that is made available to other files when they use require() to import this module
+//it can be used to export any number of objects, functions, or variables from a module, and literals as well
